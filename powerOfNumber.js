@@ -8,9 +8,10 @@
 //num1=2;num2=5;
 
 function powerOfNumber(num1,num2){
+    if(num2<0) return 1 / powerOfNumber(num1, -num2)//if num2 is negative number use this line...it's important for negative number
     if(num2 == 0) return 1;
     if(num2 == 1) return 2;
     return num1*powerOfNumber(num1,num2-1);
 
 }
-console.log(powerOfNumber(2,5));
+console.log(powerOfNumber(2,-5));
