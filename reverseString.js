@@ -1,7 +1,8 @@
 let string1="Hello World"
-let reversedString = " ";
-for(let i=string1.length-1; i >= 0; i--){
-    reversedString += string1[i];
+string1=string1.split("");
+for(let start=0,end=string1.length-1;start < end;start++,end--){
+let temp=string1[start];
+string1[start]=string1[end];
+string1[end]=temp;
 }
-console.log(reversedString);// dlroW olleH
-console.log(string1);//Hello World
+console.log(string1.join(""));
