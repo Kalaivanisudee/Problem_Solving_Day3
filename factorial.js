@@ -8,10 +8,10 @@
 //5!=5*4!=>5*24=120
 //n!=n*n-1*n-2*n-3...(n-1)!
 //n!=n*(n-1)
-
-function factorial(num){
-if(num < 1) return 1;
-return num * factorial(num-1);
+//tail call recursion
+function factorial(num,x){
+if(num < 1) return x;
+return  factorial(num-1,num*x);
 
 }
-console.log(factorial(5));//120
+console.log(factorial(5,1));//120
