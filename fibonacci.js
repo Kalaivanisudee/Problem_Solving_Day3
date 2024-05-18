@@ -8,10 +8,12 @@
 //fibonacci(n)=>fibonacci(n-1)+fibonacci(n-2)
 
 //Recursive approach
-
-function fibonacci(num){
-    if(num < 2) return num;
-    return fibonacci(num-1)+ fibonacci(num-2);
+//a=>insted of  fibonacci(0)=0
+//b=>insted of  fibonacci(1)=1
+function fibonacci(num,previous,current){
+   if(num == 0) return previous;
+   if(num == 1) return current;
+  return fibonacci(num-1,current,previous+current)
 
 }
-console.log(fibonacci(10));//55
+console.log(fibonacci(50,0,1))//12586269025
