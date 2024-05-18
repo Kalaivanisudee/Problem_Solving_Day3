@@ -7,12 +7,14 @@
 // for(let i=1;i<=10;i++){
 //     console.log(i)//1 2 3 4 5 6 7 8 9 10
 // }
-
-//Recursive Approach
-function printTill(num,current){
-    if(num<current) return;
-    console.log(current)//1 2 3 4 5 6 7 8 9 10
-    printTill(num,current+1)
-
+for(let i=10;i>0;i--){
+    console.log(i);
 }
-printTill(10,1)
+//Recursive Approach
+// function printTill(num,current){
+//     if(num<current) return;
+//     console.log(current)//1 2 3 4 5 6 7 8 9 10
+//     printTill(num,current+1)
+
+// }
+// printTill(10,1)
