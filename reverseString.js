@@ -1,8 +1,14 @@
-let string1="Hello World"
-string1=string1.split("");
-for(let start=0,end=string1.length-1;start < end;start++,end--){
-let temp=string1[start];
-string1[start]=string1[end];
-string1[end]=temp;
+//Recursive approach
+let string1="Hello World";
+
+function helper(string1,start){
+if(string1.length == start) return " ";
+return helper(string1,start+1) + string1[start];
+
 }
-console.log(string1.join(""));
+
+function reverseString(string1){
+   return  helper(string1,0);
+
+}
+console.log(reverseString(string1))// dlroW olleH
